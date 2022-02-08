@@ -1,0 +1,92 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	color: $black;
+	background-color: $white;
+	font-size: 16px;
+	font-family: "SF-Pro-Display";
+	font-weight: 400;
+	line-height: 24px;
+	height: 100%;
+
+	&._lock{
+		overflow: hidden;
+	}
+
+	&._pc .menu__item--catalog:hover .sub-menu__list{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+
+	&._touch .menu__arrow{
+		display: block;
+		position: absolute;
+		width: 12px;
+		height: 6px;
+		background-image: url("../images/icons/arrow-bottom.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+		top: 10px;
+		right: 0;
+		transition: transform 0.3s;
+	}
+
+	&._touch .menu__item--catalog{
+		padding-right: 22px;
+	}
+
+	&._touch .menu__item--catalog._active .sub-menu__list{
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+		overflow: auto;
+		flex: 1 1 100%;
+	}
+
+	&._touch .menu__item--catalog._active .menu__arrow{
+		transform: rotate(180deg);
+	}
+}
+
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 100%;
+}
+
+.container {
+	max-width: 1270px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.sr-only {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+.title{
+	font-weight: 600;
+	font-size: 44px;
+	line-height: 62px;
+	color: $black;
+}
