@@ -1025,6 +1025,7 @@ body._touch .menu__item--catalog._active .menu__arrow {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
+  background-color: #fff;
 }
 .job__subtitle::before {
   position: absolute;
